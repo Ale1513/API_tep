@@ -7,28 +7,21 @@ const filePath = path.join(process.cwd(), 'api_cultura', 'cultura.json');
 const jsonData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
 
 app.get('/api/cultura', (req, res) => {
-  const luogo = req.query.luogo;
-  const tipo = req.query.tipo;
-  const id = req.query.id;
-  
-  if(id){
-    jsonData = jsonData.find(cultura => {
-      return cultura.id == id;
-    });
+  let filteredData = jsonData;
+
+  if (req.query.id) {
+    filteredData = filteredData.filter(cultura => cultura.id == req.query.id);
   }
-  
-  if(luogo){
-    jsonData = jsonData.filter(cultura => {
-      return cultura.luogo.toLowerCase().includes(id.toLowerCase());
-    });
+
+  if (req.query.luogo) {
+    filteredData = filteredData.filter(cultura => cultura.luogo.toLowerCase().includes(req.query.luogo.toLowerCase()));
   }
-  
-  if(tipo){
-    jsonData = jsonData.filter(cultura => {
-      return cultura.tipo.toLowerCase().includes(id.toLowerCase());
-    }));    
+
+  if (req.query.tipo) {
+    filteredData = filteredData.filter(cultura => cultura.tipo.toLowerCase().includes(req.query.tipo.toLowerCase()));
   }
-  res.json(jsonData);
+
+  res.json(filteredData);
 });
 
 const port = process.env.PORT || 3000;
