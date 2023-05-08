@@ -13,8 +13,8 @@ app.get('/api/cultura', (req, res) => {
 app.get('/api/cultura/:id', (req, res) => {
   const id = req.params.id;
   
-  res.json(jsonData.filter(cultura => {
-    return cultura.id.includes(id);
+  res.json(jsonData.find(cultura => {
+    return cultura.id == id;
   }));
 });
 
