@@ -2,7 +2,7 @@ const express = require("express");
 const fs = require('fs');
 
 const app = express();
-const data = fs.readFileSync('./cultura.json', 'utf8');
+const data = fs.readFileSync('api_cultura/cultura.json', 'utf8');
 const jsonData = JSON.parse(data);
 
 app.get('/api/cultura', (req, res) => {
