@@ -10,6 +10,14 @@ app.get('/api/cultura', (req, res) => {
   res.json(jsonData);
 });
 
+app.get('/api/cultura/:id', (req, res) => {
+  const id = req.params.id;
+  
+  res.json(jsonData.filter(cultura => {
+    return cultura.id.toLowerCase().includes(id.toLowerCase());
+  }));
+});
+
 app.get('/api/cultura/:luogo', (req, res) => {
   const id = req.params.luogo;
   
