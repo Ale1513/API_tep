@@ -12,19 +12,19 @@ app.get('/api/cultura', (req, res) => {
   const id = req.query.id;
   
   if(id){
-    res.json(jsonData.find(cultura => {
+    jsonData = jsonData.find(cultura => {
       return cultura.id == id;
-    }));
+    });
   }
   
   if(luogo){
-    res.json(jsonData.filter(cultura => {
+    jsonData = jsonData.filter(cultura => {
       return cultura.luogo.toLowerCase().includes(id.toLowerCase());
-    }));
+    });
   }
   
   if(tipo){
-    res.json(jsonData.filter(cultura => {
+    jsonData = jsonData.filter(cultura => {
       return cultura.tipo.toLowerCase().includes(id.toLowerCase());
     }));    
   }
