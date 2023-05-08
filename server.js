@@ -14,7 +14,7 @@ app.get('/api/cultura/:id', (req, res) => {
   const id = req.params.id;
   
   res.json(jsonData.filter(cultura => {
-    return cultura.id.toLowerCase().includes(id.toLowerCase());
+    return cultura.id.includes(id);
   }));
 });
 
