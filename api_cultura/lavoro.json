@@ -1,6 +1,6 @@
 [
     {
-        "regione": "Valle d'Aosta",
+        "regione": "Valle_d_Aosta",
         "tasso_occ": 69.8,
         "tasso_dis": 5.4,
         "stipendi_lordi_media": 29923
@@ -24,7 +24,7 @@
         "stipendi_lordi_media": 31243
     },
     {
-        "regione": "Trentino Alto Adige",
+        "regione": "Trentino_Alto_Adige",
         "tasso_occ": 71.8,
         "tasso_dis": 3.1,
         "stipendi_lordi_media": 31651
@@ -36,13 +36,13 @@
         "stipendi_lordi_media": 29958
     },
     {
-        "regione": "Friuli-Venezia Giulia",
+        "regione": "Friuli_Venezia_Giulia",
         "tasso_occ": 68.5,
         "tasso_dis": 5.4,
         "stipendi_lordi_media": 30475
     },
     {
-        "regione": "Emilia Romagna",
+        "regione": "Emilia_Romagna",
         "tasso_occ": 69.7,
         "tasso_dis": 5.1,
         "stipendi_lordi_media": 30646
