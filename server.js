@@ -7,31 +7,28 @@ const filePath = path.join(process.cwd(), 'api_cultura', 'cultura.json');
 const jsonData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
 
 app.get('/api/cultura', (req, res) => {
+  const luogo = req.query.luogo;
+  const tipo = req.query.tipo;
+  const id = req.query.id;
+  
+  if(id){
+    res.json(jsonData.find(cultura => {
+      return cultura.id == id;
+    }));
+  }
+  
+  if(luogo){
+    res.json(jsonData.filter(cultura => {
+      return cultura.luogo.toLowerCase().includes(id.toLowerCase());
+    }));
+  }
+  
+  if(tipo){
+    res.json(jsonData.filter(cultura => {
+      return cultura.tipo.toLowerCase().includes(id.toLowerCase());
+    }));    
+  }
   res.json(jsonData);
-});
-
-app.get('/api/cultura/:id', (req, res) => {
-  const id = req.params.id;
-  
-  res.json(jsonData.find(cultura => {
-    return cultura.id == id;
-  }));
-});
-
-app.get('/api/cultura/:luogo', (req, res) => {
-  const id = req.params.luogo;
-  
-  res.json(jsonData.filter(cultura => {
-    return cultura.luogo.toLowerCase().includes(id.toLowerCase());
-  }));
-});
-
-app.get('/api/cultura/:tipo', (req, res) => {
-  const id = req.params.tipo;
-  
-  res.json(jsonData.filter(cultura => {
-    return cultura.tipo.toLowerCase().includes(id.toLowerCase());
-  }));
 });
 
 const port = process.env.PORT || 3000;
