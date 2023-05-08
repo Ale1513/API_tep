@@ -18,6 +18,14 @@ app.get('/api/cultura/:luogo', (req, res) => {
   }));
 });
 
+app.get('/api/cultura/:tipo', (req, res) => {
+  const id = req.params.tipo;
+  
+  res.json(jsonData.filter(cultura => {
+    return cultura.tipo.toLowerCase().includes(id.toLowerCase());
+  }));
+});
+
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`API in ascolto sulla porta ${port}`);
