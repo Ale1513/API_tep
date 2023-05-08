@@ -1,23 +1,24 @@
-const express = require("express");
+const express = require('express');
 const fs = require('fs');
-
+const path = require('path');
 const app = express();
-const data = fs.readFileSync('api_cultura/cultura.json', 'utf8');
-const jsonData = JSON.parse(data);
+
+const filePath = path.join(process.cwd(), 'api_cultura', 'cultura.json');
+const jsonData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
 
 app.get('/api/cultura', (req, res) => {
   res.json(jsonData);
 });
 
-
-app.get('/api/cultura/:luogo', function(req, res){
-    const id = req.params.luogo;
-    
-    res.json(c.filter(cultura => {
-        return cultura.luogo.toLowerCase().includes(id.toLowerCase());
-      }));
+app.get('/api/cultura/:luogo', (req, res) => {
+  const id = req.params.luogo;
+  
+  res.json(jsonData.filter(cultura => {
+    return cultura.luogo.toLowerCase().includes(id.toLowerCase());
+  }));
 });
 
-app.listen(3000, () => {
-  console.log('API in ascolto sulla porta 3000');
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`API in ascolto sulla porta ${port}`);
 });
