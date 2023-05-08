@@ -75,7 +75,7 @@
         "id": 9,
         "nome": "Sassi di Matera",
         "luogo": "Matera",
-        "tipo": "Attrazione Turistica",
+        "tipo": "Attrazione_Turistica",
         "pagamento": "Gratuito",
         "img":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fviaggi.corriere.it%2Feuropa%2Fitalia%2Fmatera%2F&psig=AOvVaw2sg6xcrvmS1cu-Dz-UTRfp&ust=1682958393020000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNi5rt2C0v4CFQAAAAAdAAAAABAI"
     },
@@ -83,7 +83,7 @@
         "id": 10,
         "nome": "Scavi di Pompei",
         "luogo": "Pompei",
-        "tipo": "Attrazione Turistica",
+        "tipo": "Attrazione_Turistica",
         "pagamento": "2€",
         "img":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.napolike.it%2Fgli-scavi-di-pompei-riaprono-al-pubblico-ecco-i-percorsi&psig=AOvVaw1dexgjPY5MUDYNCahYQGn9&ust=1682958660551000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCJj-ptyD0v4CFQAAAAAdAAAAABAD"
     },
@@ -99,7 +99,7 @@
         "id": 12,
         "nome": "Valle dei Templi",
         "luogo": "Agrigento",
-        "tipo": "Attrazione Turistica",
+        "tipo": "Attrazione_Turistica",
         "pagamento": "10€",
         "img":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.italia.it%2Fit%2Fsicilia%2Fagrigento%2Fcosa-fare%2Fvalle-dei-templi&psig=AOvVaw2IpIb0JH6wLpYjLUq9YJMJ&ust=1682958926029000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCKDK5dyE0v4CFQAAAAAdAAAAABAD"
     },
@@ -107,7 +107,7 @@
         "id": 13,
         "nome": "Ponte Vecchio",
         "luogo": "Firenze",
-        "tipo": "Attrazione Turistica",
+        "tipo": "Attrazione_Turistica",
         "pagamento": "Gratuito",
         "img":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.scoprifirenze.com%2Fponte-vecchio&psig=AOvVaw1gjs0oy3EacF7fbn8_M5xx&ust=1682959363764000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCJiwuKyG0v4CFQAAAAAdAAAAABAD"
     },
