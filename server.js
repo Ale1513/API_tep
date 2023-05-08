@@ -3,6 +3,13 @@ const fs = require('fs');
 const path = require('path');
 const app = express();
 
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  next();
+});
+
 const filePathCultura = path.join(process.cwd(), 'api_cultura', 'cultura.json');
 const filePathLavoro = path.join(process.cwd(), 'api_cultura', 'lavoro.json');
 const jsonDataCultura = JSON.parse(fs.readFileSync(filePathCultura, 'utf8'));
